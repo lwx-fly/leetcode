@@ -11,12 +11,12 @@ class Solution:
 
         def traverse(root: Optional[TreeNode]):
             if not root:
-                return (1, sys.maxsize, -sys.maxsize + 1, 0, 0)
+                return (1, sys.maxsize, -sys.maxsize + 1, 0)
             left = traverse(root.left)
             right = traverse(root.right)
             res = [0] * 4
-            # 0 bst 1 min 2 max 3 sum
-            if left[0] == 1 and right[0] == 1 and root.val > left[2] and root.val < right[1]:
+            # 0 bst 1 min 2 max 3sum
+            if left[0] == 1 and right[0] == 1 and left[2] < root.val and right[1] > root.val:
                 res[0] = 1
                 res[1] = min(left[1], root.val)
                 res[2] = max(right[2], root.val)
