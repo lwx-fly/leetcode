@@ -3,6 +3,10 @@ from typing import List
 from tree.TreeNode import TreeNode
 
 
+'''
+不同的二叉搜索树
+'''
+
 class Solution:
     def generateTrees(self, n: int) -> List[TreeNode]:
         if n == 0:

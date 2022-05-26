@@ -2,6 +2,9 @@ from typing import Optional
 
 from tree.TreeNode import TreeNode
 
+'''
+修剪二叉搜索树
+'''
 
 class Solution:
     def trimBST(self, root: Optional[TreeNode], low: int, high: int) -> Optional[TreeNode]:

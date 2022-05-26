@@ -1,0 +1,15 @@
+from typing import Optional
+
+from tree.TreeNode import TreeNode
+
+'''
+二叉树深度
+'''
+
+
+class Solution:
+
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
+        return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1

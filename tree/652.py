@@ -3,6 +3,10 @@ from typing import Optional, List
 from tree.TreeNode import TreeNode
 
 
+'''
+重复的子树
+'''
+
 class Solution:
     def findDuplicateSubtrees(self, root: Optional[TreeNode]) -> List[Optional[TreeNode]]:
         # first serial subtree and then compare

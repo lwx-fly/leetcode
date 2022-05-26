@@ -3,6 +3,10 @@ from typing import Optional
 from tree.TreeNode import TreeNode
 
 
+'''
+二叉搜索子树的最大k个元素
+'''
+
 class Solution:
     # def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
     #     self.res = []
@@ -17,18 +21,23 @@ class Solution:
     #     if k > len(self.res):
     #         return None
     #     return self.res[k]
-    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        self.res=0
-        self.rank=0
-        def traverse(root,k):
-            if not root:
-                return
-            traverse(root.left,k)
-            self.rank=self.rank+1
-            if self.rank==k:
-                self.res=root.val
-                return
-            traverse(root.right,k)
+        def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+            self.res = 0
+            self.rank = 0
+
+            def traverse(root, k):
+                if not root:
+                    return
+                traverse(root.left, k)
+                self.rank = self.rank + 1
+                if self.rank == k:
+                    self.res = root.val
+                    return
+                traverse(root.right, k)
+
+            traverse(root, k)
+            return self.res
+
 
 
 

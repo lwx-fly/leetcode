@@ -1,6 +1,9 @@
 from tree.TreeNode import TreeNode
 
-
+'''
+二叉树直径
+后序遍历
+'''
 class Solution:
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
         self.ans = 0

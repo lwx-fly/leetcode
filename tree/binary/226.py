@@ -12,7 +12,7 @@ class Solution:
         return root
 
 
-    def invertTreeaaa(self, root: TreeNode) -> TreeNode:
+    def invertTree(self, root: TreeNode) -> TreeNode:
         if not root:
             return root
         tmp = root.left

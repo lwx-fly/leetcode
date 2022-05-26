@@ -2,6 +2,11 @@ from typing import List
 
 from tree.TreeNode import TreeNode
 
+'''
+Construct Binary Tree from Preorder and Inorder Traversal
+从前序和中序遍历构建二叉树
+'''
+
 
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:

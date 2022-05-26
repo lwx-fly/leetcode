@@ -6,6 +6,10 @@ class Node:
         self.next = next
 
 
+'''
+给定一个 完美二叉树 ，其所有叶子节点都在同一层，每个父节点都有两个子节点
+'''
+
 class Solution:
     def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
         if not root:

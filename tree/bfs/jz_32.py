@@ -3,6 +3,10 @@ from typing import List
 
 from tree.TreeNode import TreeNode
 
+'''
+从上到下打印二叉树
+'''
+
 
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[int]:

@@ -1,3 +1,9 @@
+
+'''
+不同二叉搜索树的数量
+'''
+
+
 class Solution:
     def numTrees(self, n: int) -> int:
         memo = [[0] * (n + 1) for i in range(n + 1)]

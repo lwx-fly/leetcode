@@ -2,6 +2,9 @@ from typing import List
 
 from tree.TreeNode import TreeNode
 
+'''
+从中序和后序遍历构建二叉树
+'''
 
 class Solution:
     def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
@@ -12,6 +15,7 @@ class Solution:
             index_ = inorder.index(root_)
             left_len = index_ - in_start
             root = TreeNode(root_)
+
             root.left = build(inorder, in_start, index_ - 1, postorder, post_start, post_start + left_len - 1)
             root.right = build(inorder, index_ + 1, in_end, postorder, post_start + left_len, post_end - 1)
             return root

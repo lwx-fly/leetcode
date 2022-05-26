@@ -13,6 +13,9 @@ class Solution:
         # end.next = start;2->1
         # temp = start;
         # pre -> head -> next->后
+
+        # 1 -> 2 -> 3 ->4
+        # next=2 ,1->3
         if not head or not head.next:
             return head
         next = head.next

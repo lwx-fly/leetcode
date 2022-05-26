@@ -1,11 +1,16 @@
 from tree.TreeNode import TreeNode
 
+'''
+平衡二叉树
+'''
+
 
 class Solution:
     def isBalanced(self, root: TreeNode) -> bool:
         return self.recur(root) != -1
 
     def recur(self, root):
+        # 使用后序遍历
         if not root:
             return 0
         left = self.recur(root.left)
