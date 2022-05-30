@@ -3,7 +3,7 @@ from typing import Optional
 from tree.TreeNode import TreeNode
 
 '''
-删除二叉树中节点
+删除二叉搜索树中节点
 '''
 
 

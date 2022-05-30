@@ -8,7 +8,7 @@ class Solution:
         if not root:
             return 0
         res = 1
-        q = collections.deque
+        q = collections.deque()
         q.append(root)
         while q:
             l = len(q)
