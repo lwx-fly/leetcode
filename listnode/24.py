@@ -6,12 +6,17 @@ class Solution:
         dummy = ListNode(0)
         dummy.next = head
         h1 = dummy
+        # 1 -> 2->3
+
         while dummy.next and dummy.next.next:
             begin = dummy.next
             end = dummy.next.next
 
             dummy.next = end
+
             begin.next = end.next
             end.next = begin
+
             dummy = begin
+
         return h1.next

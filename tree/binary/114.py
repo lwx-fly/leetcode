@@ -10,8 +10,10 @@ class Solution:
         # flattern left and right
         self.flatten(root.left)
         self.flatten(root.right)
+
         left = root.left
         right = root.right
+
         root.left = None
         root.right = left
         p = root

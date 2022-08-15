@@ -19,6 +19,7 @@ class Solution:
         if not head or not head.next:
             return head
         next = head.next
+
         head.next = self.swapPairs(next.next)
         next.next = head
         return next
