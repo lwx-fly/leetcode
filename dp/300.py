@@ -25,7 +25,7 @@ class Solution:
             left = 0
             right = res
             while left < right:
-                mid = (left + right) / 2
+                mid = (left + right) // 2
                 if top[mid] > item:
                     right = mid
                 elif top[mid] < item:
