@@ -52,7 +52,7 @@ class Solution:
             if str1[i] == str2[j]:
                 memo[i][j] = dp(str1, i + 1, str2, j + 1)
             else:
-                memo[i][j] = min(dp(str1, i + 1, str2, j) + str1[i], dp(str1, i, str2, j + 1) + str2[j])
+                memo[i][j] = min(dp(str1, i + 1, str2, j) + ord(str1[i]), dp(str1, i, str2, j + 1) + ord(str2[j]))
             return memo[i][j]
 
-        return dp(s1, m, s2, n)
+        return dp(s1, 0, s2, 0)

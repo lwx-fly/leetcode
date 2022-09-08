@@ -21,7 +21,7 @@ class Solution:
                 return memo[amount]
             res = sys.maxsize
             for i in coins:
-                sub = dp(coins, amount)
+                sub = dp(coins, amount-i)
                 if sub == -1:
                     continue
                 res = min(res, sub + 1)

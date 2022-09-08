@@ -43,7 +43,13 @@ class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
         m = len(word1)
         n = len(word2)
-
+        #dp table
+        # 输入：word1 = 0"horse", word2 ="ros"
+        # 输入：word1 = 0"horse" --> m
+        #              r
+        #              o
+        #              s
+        # -->n
         dp = [[0] * (n + 1) for i in range(m + 1)]
         for i in range(m + 1):
             dp[i][0] = i
