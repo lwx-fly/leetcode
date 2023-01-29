@@ -24,9 +24,6 @@ class Solution:
             else:
                 l2.next = p
                 l2 = l2.next
-            tmp = p.next
-            p.next = None
-            p = tmp
-
         l1.next = h2.next
+
         return h1.next
