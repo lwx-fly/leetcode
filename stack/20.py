@@ -6,16 +6,14 @@ class Solution:
             "[": "]"
         }
         stack = []
-        for x in s:
-            if x in map:
-                stack.append(map[x])
-            else:
-                if len(stack) != 0:
-                    a = stack.pop()
-                    if x != a:
-                        return False
-                    else:
-                        continue
-                else:
+        for i in s:
+            if i in map:
+                stack.append(map[i])
+            else :
+                if len(stack)==0:
                     return False
-        return len(stack) == 0
+                a=stack.pop()
+                if a!=i:
+                    return False
+        return len(stack)==0
+

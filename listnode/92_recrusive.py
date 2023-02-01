@@ -14,5 +14,6 @@ class Solution:
 
         if left == 1:
             return reverse(head, right)
+        # 1 2 3 4 5  , [3, 4 ]
         head.next = self.reverseBetween(head.next, left - 1, right - 1)
         return head

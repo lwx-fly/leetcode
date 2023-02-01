@@ -7,6 +7,7 @@ class Solution:
     def removeDuplicateLetters(self, s: str) -> str:
         stack = []
         remain = collections.Counter(s)
+        #bcabc b c
         for i in s:
             if i not in stack:
                 while stack and i < stack[-1] and remain[stack[-1]] > 0:

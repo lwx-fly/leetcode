@@ -9,6 +9,8 @@ class MinStack:
 
     def push(self, val: int) -> None:
         self.a.append(val)
+        # 单调栈
+        #  4 3 2
         if not self.b or self.b[-1] >= val:
             self.b.append(val)
 
