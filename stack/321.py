@@ -3,6 +3,7 @@ class Solution:
 
         def pick_max(nums, k):
             stack = []
+            # 这里
             drop = len(nums) - k
             for num in nums:
                 while drop and stack and stack[-1] < num:
