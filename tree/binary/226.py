@@ -11,7 +11,6 @@ class Solution:
         root.right = left
         return root
 
-
     def invertTree(self, root: TreeNode) -> TreeNode:
         if not root:
             return root

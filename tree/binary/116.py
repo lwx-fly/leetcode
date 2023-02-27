@@ -19,7 +19,7 @@ class Solution:
 
     def connectTwo(self, node1, node2):
         if not node1 or not node2:
-            return
+            return node1
         node1.next = node2
         self.connectTwo(node1.left, node1.right)
         self.connectTwo(node2.left, node2.right)

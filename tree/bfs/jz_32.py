@@ -15,6 +15,7 @@ class Solution:
         res, queue = [], collections.deque()
         queue.append(root)
         while queue:
+            #不需要按照层打印，不要加上循环
             node = queue.popleft()
             res.append(node.val)
             if node.left:

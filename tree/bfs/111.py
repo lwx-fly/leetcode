@@ -14,11 +14,12 @@ class Solution:
             l = len(q)
             for i in range(l):
                 node = q.popleft()
+                # 注意这里
                 if not node.left and not node.right:
                     return res
-                if not node.left:
+                if node.left:
                     q.append(node.left)
-                if not node.right:
+                if node.right:
                     q.append(node.right)
-            res=res+1
+            res = res + 1
         return res

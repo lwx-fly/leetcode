@@ -10,6 +10,9 @@ from tree.TreeNode import TreeNode
 class Solution:
     def constructFromPrePost(self, preorder: List[int], postorder: List[int]) -> TreeNode:
         def build(preorder, pre_start, pre_end, postorder, post_start, post_end):
+            #   1
+            # 2     3
+            # 4 5   6  7
             if pre_start > pre_end:
                 return None
             if pre_start == pre_end:
